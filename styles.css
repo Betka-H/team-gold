@@ -36,7 +36,7 @@ a:active{
 .header{
     display:flex;
     flex-direction: column;
-    margin:2vw;
+    /* margin:2vw; */
     margin-bottom:4vw;
     text-align: center;
     border-style: solid;
@@ -71,8 +71,8 @@ a:active{
     padding:16px;
     display:flex;
     flex-direction: column;
-    margin-left:2vw;
-    margin-right:2vw;
+    /* margin-left:2vw;
+    margin-right:2vw; */
     margin-top:2vw;
     text-align: center;
     border-style: solid;
@@ -82,15 +82,37 @@ a:active{
 }
 
 /* home page */
-.home-block{
+
+.title{
+    text-align:center;
+    font-size:max(4vw, 42px);
+}
+
+.home-tile{
+    display:flex;
+    align-items: center;
+}
+
+.home-tile-text{
     display: flex;
     flex-direction: column;
     margin:4vw;
 }
 
-/* texts */
+/* generic*/
 
-.title{
-    text-align:center;
-    font-size:max(4vw, 42px);
+p{
+    text-align:justify;
+}
+
+img{
+    max-width:42%;
+    height:100%;
+    border-style:solid;
+    border-width:0.5vw;
+    border-color:var(--navy-blue);
+}
+
+body{
+    padding:32px;
 }
