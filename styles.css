@@ -93,8 +93,6 @@ a:active{
     flex-wrap:wrap-reverse;/* 
     align-items: center; */
     justify-content:center;
-    margin-top:32px;
-    margin-bottom:32px;
 }
 
 .home-tile-right{
@@ -131,4 +129,8 @@ img{
 
 body{
     padding:2vw;
+}
+
+hr{
+    margin:32px;
 }
