@@ -97,6 +97,15 @@ a:active{
     margin-bottom:32px;
 }
 
+.home-tile-right{
+    display:flex;
+    flex-wrap:wrap;/* 
+    align-items: center; */
+    justify-content:center;
+    margin-top:32px;
+    margin-bottom:32px;
+}
+
 .home-tile-text{
     display: flex;
     flex-direction: column;
