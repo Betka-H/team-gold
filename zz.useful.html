@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- js for including another file inside -->
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain attribute:*/
+            file = elmnt.getAttribute("headerthing");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("headerthing");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+</script>
+
+<head>
+    <meta charset="UTF-8"> <!-- nvm this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>page title here</title> <!-- title -->
+    <link rel="icon" type="image/x-icon" href="./images/web icon.png"> <!-- icon -->
+    <link rel="stylesheet" href="styles/styles.css"> <!-- css link -->
+
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- second part of js for another file -->
+    <div headerthing="betka test/header.html"></div>
+    jksfbsjkbf
+    <script>
+        includeHTML();
+    </script>
+
+    <el class="classnamehere">text</el>
+    <!-- set a class, use "." to refer to in css. can be applied to more elements -->
+    <el id="idnamehere">text</el> <!-- set an id, use "#" to refer to in css. only applied to one element -->
+
+    headers
+    <h1>largest</h1>
+    <h6>to smallest</h6>
+
+    formatting
+    <el style="color:red">text</el> <!-- set the color of just some parts -->
+    line break <br>
+    <p>paragraph</p>
+    <strong>actually bold</strong>
+    <span style="color:maroon">span text color</span>
+
+    links
+    <a href="images/hampter.png">krecek</a>
+    <a href="#krecek"></a> <!-- link to id name on the page -->
+    images
+    <img src="image location" alt="text when no image">
+
+    lists
+    <ul> <!-- unordered (bulleted) list -->
+        <li>list1here</li>
+        <li>list2here</li>
+    </ul>
+    <ol> <!-- ordered (numbered) list -->
+        <li>list1here</li>
+        <li>list2here</li>
+    </ol>
+
+    tables
+    <table>
+        <tr> <!-- table row -->
+            <th>header 1</th> <!-- table header -->
+            <th>header 2</th>
+        </tr>
+        <tr>
+            <td>data a</td> <!-- table data -->
+            <td>data b</td>
+        </tr>
+    </table>
+
+    tags
+    https://www.w3schools.com/tags/
+
+</body>
+a
+</html>
+
+for css
+; at the end!!!
+color (hex, rgb, name), border, margin, padding, backgroud-color
+list-style-image: url('../images/smile1.png'); for lists !!only use small images!!
+table, th, td - border
+img - width, height, max-width, display, margin, border-radius
+
+a:link, a:visited, a:hover, a:active
+
+flexbox
+https://www.vzhurudolu.cz/prirucka/css-flexbox
+justify-content, align-items, flex-directions, order, align-self, flex-wrap, flex-flow, align-content
+
+js real
+console.log("helo worl");
+let pokus = "your mom hehehe";
+console.log(pokus);
+function myfunc(p1, p2) {
+    return p1 * p2 - 2 * p1;
+}
+
+let polecisel = [1, 5, 69, 6]
+let poletextu = Array("hi", "hello", "a")
+
+console.log(polecisel[3]);
+console.log(polecisel[2], poletextu[1]);
+
+
+js html
+<button onclick="console.log(myfunc(21, 35));">test</button> <!-- button test -->
+
+colors
+#4c4734 dark brown
+#916e4b light brown
+#c8be69 blegh yellow
+#f4e8cb beige/tan
+#deded1 warm gray
+
+
+
+text domov
+
+<h1>Co je Zvíře v Nouzi?</h1>
+<p>Jsme dobrovolnická skupina, která má velmi ráda zvířata. Každý den pomáháme nebohým zvířatům z ulic i lesů.</p>
+Chcete vědět více? Klikněte <a href="o-nas.html">ZDE</a>.
