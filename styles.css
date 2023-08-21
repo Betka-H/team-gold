@@ -122,7 +122,6 @@ img{
     min-width:120px;
     max-width:550px;
     height:100%;
-    border-style:solid;
     border-width:4px;
     border-color:var(--navy-blue);
 }
@@ -134,3 +133,73 @@ body{
 hr{
     margin:32px;
 }
+
+/* dashboards/savinngs map (SM) - ana*/
+.callquiz {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 2% 5%;
+    background-color: rgba(36, 70, 250, 1);
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.img-cq img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.h2-cq {
+    font-size: 4vw;
+    /* Adjust the value as needed */
+    font-weight: bold;
+    margin-bottom: 1.5vh;
+    /* Adjust the value as needed */
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.h2-line1 {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.h2-line2 {
+    display: block;
+    font-weight: bold;
+}
+
+.btncq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.btncq a {
+    display: inline-flex;
+    /* Use inline-flex */
+    align-items: center;
+    padding: 2vw 4vw;
+    /* Use vw units for responsive padding */
+    border: 1px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #ffef5e;
+    color: blue;
+    font-size: 2.5vw;
+    /* Use vw units for responsive font size */
+}
+
+
