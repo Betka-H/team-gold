@@ -2,68 +2,30 @@
 <html lang="en">
 
 <head>
-  <script>
-    function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      /*loop through a collection of all HTML elements:*/
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain attribute:*/
-        file = elmnt.getAttribute("headerthing");
-        if (file) {
-          /*make an HTTP request using the attribute value as the file name:*/
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
-              if (this.status == 200) {
-                elmnt.innerHTML = this.responseText;
-              }
-              if (this.status == 404) {
-                elmnt.innerHTML = "Page not found.";
-              }
-              /*remove the attribute, and call this function once more:*/
-              elmnt.removeAttribute("headerthing");
-              includeHTML();
-            }
-          };
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /*exit the function:*/
-          return;
-        }
-      }
-    }
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
   <!-- css link -->
   <link rel="stylesheet" type="text/css" href="./style2.css" />
+  <title>Savings map</title>
+  <link rel="icon" type="image/x-icon" href="./images/icon.png" />
+  <!-- icon -->
 </head>
 
 <body>
-  <div headerthing="./header.html"></div>
-
-  <section class="Dashboard">
-    <div class="container-sm">
-      <div class="zone clothes">
-        <ion-icon name="shirt-outline" size="large"></ion-icon>
-      </div>
-      <div class="zone clothes">
-        <ion-icon name="car-outline" size="large"></ion-icon>
-      </div>
-      <div class="zone clothes">
-        <ion-icon name="bed-outline" size="large"></ion-icon>
-      </div>
-      <div class="zone clothes">
-        <ion-icon name="library-outline" size="large"></ion-icon>
-      </div>
-      <div class="zone clothes">
-        <ion-icon name="fast-food-outline" size="large"></ion-icon>
-      </div>
+  <header class="header">
+    <div class="htop">
+      <h1>Budget Bliss</h1>
     </div>
-  </section>
+    <!-- nbottom -->
+    <nav class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="about.html">About BB</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </nav>
+  </header>
   <!-- Add the main div -ana -->
 
   <section class="callquiz">
@@ -82,7 +44,7 @@
   </section>
 
   <!--  Part with the tips -ana -->
-  <h2 class="h2-cq" style="color:black">👇 Check these links for ways to save money</h2>
+<h2 class="h2-cq" style="color:black">👇 Check these links for ways to save money</h2>
   <section class="Dashboard">
     <div class="container-sm">
       <button onclick="toggleContent('divcl')">
@@ -360,11 +322,10 @@
   </section>
 
   <script src="script.js"></script>
-  <a href="https://storyset.com/"> illustrations by Storyset</a>
-  <div headerthing="./footer.html"></div>
-  <script>
-    includeHTML();
-  </script>
+  <!-- <div headerthing="./footer.html"></div>
+    <script>
+      includeHTML();
+    </script> -->
 </body>
 
 </html>
