@@ -2,38 +2,12 @@
 <html lang="en">
 
 <head>
-    <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            /*loop through a collection of all HTML elements:*/
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                /*search for elements with a certain attribute:*/
-                file = elmnt.getAttribute("headerthing");
-                if (file) {
-                    /*make an HTTP request using the attribute value as the file name:*/
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                            /*remove the attribute, and call this function once more:*/
-                            elmnt.removeAttribute("headerthing");
-                            includeHTML();
-                        }
-                    }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    /*exit the function:*/
-                    return;
-                }
-            }
-        };
-    </script>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Bliss - Home</title>
+    <script src="js/script.js"></script>
+    <style src="styles.css"></style>
 </head>
 
 <body>
@@ -45,15 +19,10 @@
 
         <div class="home-tile"> <!-- home tile -->
 
-            <img src="./images/get-rich.png" alt="brotha got rich. get rich now using our website">
+            <img src="./images/fine.png" alt="brotha got rich. get rich now using our website">
             <div class="home-tile-text">
                 <h2>Save Money</h2>
-                <p>Budget Bliss is a company that Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
-                    ullam nisi perspiciatis doloribus distinctio enim minus, molestias ducimus nostrum, id suscipit
-                    explicabo a mollitia optio esse dolorum tempora voluptatem facere. You will be rich. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Necessitatibus ad neque eos, temporibus quae saepe
-                    molestiae nemo laborum voluptatem quisquam! Minus, cumque! Delectus sapiente vitae explicabo commodi
-                    rerum non molestiae. Money!</p>
+                <p>With our services you will no longer have to worry about budget problems. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam assumenda, perferendis cumque explicabo quibusdam labore, at magni laudantium incidunt est quos inventore, sint maxime itaque beatae optio facilis iure! Quia. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit voluptas deleniti a praesentium voluptate, nulla alias debitis voluptatem voluptatum assumenda eum dolor soluta repellat, dolorum distinctio, accusamus ullam et esse.Money!</p>
             </div>
 
         </div> <!-- end home tile -->
@@ -63,13 +32,8 @@
         <div class="home-tile-right"> <!-- home tile -->
 
             <div class="home-tile-text">
-                <h2>Just pretend that this says something else</h2>
-                <p>Budget Bliss is a company that Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
-                    ullam nisi perspiciatis doloribus distinctio enim minus, molestias ducimus nostrum, id suscipit
-                    explicabo a mollitia optio esse dolorum tempora voluptatem facere. You will be rich. Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Necessitatibus ad neque eos, temporibus quae saepe
-                    molestiae nemo laborum voluptatem quisquam! Minus, cumque! Delectus sapiente vitae explicabo commodi
-                    rerum non molestiae. Money!</p>
+                <h2>We will help you on your journey!</h2>
+                <p>Budget Bliss is a company that Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt mollitia repudiandae neque perferendis vel placeat dignissimos architecto voluptatem itaque. Eligendi perferendis id ut eos expedita nemo doloribus laudantium veritatis ipsum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. At id repellat atque quo facilis impedit aperiam commodi nostrum quasi corporis voluptates, placeat aliquam repellendus pariatur incidunt quibusdam vero voluptas quis. Money!</p>
             </div>
             <img src="/images/get-rich.png" alt="brotha got rich. get rich now using our website">
 
@@ -78,7 +42,7 @@
 
         <section class="callquiz">
             <div class="img-cq">
-                <img src="/team-gold/Personal finance-rafiki.png" alt="Illustration" />
+                <img src="images/savemunz.png" alt="Illustration"/>
             </div>
             <div class="right-content">
                 <h2 class="h2-cq">
@@ -86,7 +50,7 @@
                     <span class="h2-line2">Take our saving quiz!</span>
                 </h2>
                 <div class="btncq">
-                    <a href="/Saving map/quiz.html" target="_blank">Quiz</a>
+                    <a href="quiz.html" target="_blank">Quiz</a>
                 </div>
             </div>
         </section>
@@ -96,6 +60,8 @@
             includeHTML();
         </script>
     </div>
+
+   
 </body>
 
 </html>
