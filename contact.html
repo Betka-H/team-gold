@@ -53,42 +53,75 @@
                         
                           <div>
                             <div>
-                              <input type="radio" name="freq" checked="checked">
+                              <input type="radio" name="freq" checked="checked" onclick="nlcustomradiooff()">
                               <label>Daily</label>
                             </div>
                           </div>
 
                           <div>
                             <div>
-                              <input type="radio" name="freq">
+                              <input type="radio" name="freq" onclick="nlcustomradiooff()">
                               <label>Weekly</label>
                             </div>
                           </div>
 
                           <div>
                             <div>
-                              <input type="radio" name="freq">
+                              <input type="radio" name="freq" onclick="nlcustomradiooff()">
                               <label>Monthly</label>
                             </div>
                           </div>
 
                           <div>
                             <div class="cb">
-                              <input type="radio" name="freq">
+                              <input type="radio" name="freq" onclick="nlcustomradioon()">
                               <label>Custom:</label>
                             </div>
                           </div>
                           <div class="nlfreqcustom">
+
+
+
+
+
+
+
+
+
+
+
+
                             Every 
-                            <input type="number" name="nfcmonth" min="0" value="0">
+                            <input type="number" name="nfcmonth" min="0" value="0"> <!-- months -->
                                 <label for="nfcmonth"> months, </label>
                             
-                            <input type="number" name="nfcweek" min="0" value="0">
+
+                            <input type="number" name="nfcweek" min="0" value="0"> <!-- weeks -->
                                 <label for="nfcweek"> weeks and  </label>
         
-                            <input type="number" name="nfcday" min="0" value="0">
+
+                            <input type="number" name="nfcday" min="0" value="0"> <!-- days -->
                                 <label for="nfcday"> days.</label>
                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                          </div>
                     </div>
 
@@ -101,7 +134,7 @@
         </div> <!-- end nlboxes -->
 
         <div class="nlsubmitbtn">
-            <button onclick="checksub()">Submit!</button>
+            <button onclick="subcheck()">Submit!</button>
         </div>
 
     </div> <!-- end nl -->
@@ -109,12 +142,12 @@
 
 
 
-
-
-
-
-
-
+<script>
+function myFunction() {
+  let x = document.getElementById("myNumber").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
 
 
 

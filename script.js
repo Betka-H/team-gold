@@ -8,12 +8,21 @@ function toggleContent(contentId) {
     }
 };
 
+let nlcustomcheck;
 
-function checksub(){
-    if(checkbox.checked==true){
-        alert("Checked!");
-          }
-    else {
-         alert("UnChecked!");
-           }
+function nlcustomradiooff(){
+        nlcustomcheck=false;
+        console.log("custom false");
 };
+
+function nlcustomradioon(){
+    nlcustomcheck=true;
+    console.log("custom true");
+};
+
+
+function subcheck(){
+    if (document.getElementById("nlmailinput").value==null){
+        console.log("a");
+    }
+}
