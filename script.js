@@ -6,6 +6,14 @@ function toggleContent(contentId) {
     } else {
         content.style.display = "none";
     }
-}
+};
 
 
+function checksub(){
+    if(checkbox.checked==true){
+        alert("Checked!");
+          }
+    else {
+         alert("UnChecked!");
+           }
+};

@@ -5,13 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Bliss - Contact us</title>
     <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <div headerthing="./header.html"></div>
-    contact
-    <hr>
-    contact page stuff
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, hic cumque consequatur possimus inventore vel corrupti sequi dolores soluta est, ad aliquid consequuntur unde fugit porro, optio fuga itaque ullam.</p>
+
+
+    <!-- 
+    <div headerthing="./header.html"></div> -->
+
+
+
+
+
+
+
+
+
+    <div class="nl" id="newsletter">
+
+        <div class="nltitles">
+            <h1>Subscibe to our newsletter!</h1>
+            <h3>Be the first to find out about the newest trends in money saving!</h3>
+        </div>
+
+        <div class="nlboxes">
+            <div class="nlbox"> <!-- first box -->
+                <h2>Enter your e-mail:</h2>
+
+                <div class="nlmail"> <!-- mail-->
+                    <input type="text" placeholder="name@mail.com" class="nlmailinput"> <!-- mail input field -->
+
+                    <div class="nltos"> <!-- tos check -->
+                        <input type="checkbox" name="toscheck" oncheck="checksub()"> <!-- tos check box -->
+                            <label for="toscheck">I agree to the <a href="tos.html">Terms of Service</a></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nlhr"></div> <!-- divider -->
+
+            <div class="nlbox"> <!-- second box -->
+
+                <h3>How often would you like to receive our emails?</h3>
+
+                <div>
+                    <div class="nlfreqradio">
+                        
+                          <div>
+                            <div>
+                              <input type="radio" name="freq" checked="checked">
+                              <label>Daily</label>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div>
+                              <input type="radio" name="freq">
+                              <label>Weekly</label>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div>
+                              <input type="radio" name="freq">
+                              <label>Monthly</label>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="cb">
+                              <input type="radio" name="freq">
+                              <label>Custom:</label>
+                            </div>
+                          </div>
+                          <div class="nlfreqcustom">
+                            Every 
+                            <input type="number" name="nfcmonth" min="0" value="0">
+                                <label for="nfcmonth"> months, </label>
+                            
+                            <input type="number" name="nfcweek" min="0" value="0">
+                                <label for="nfcweek"> weeks and  </label>
+        
+                            <input type="number" name="nfcday" min="0" value="0">
+                                <label for="nfcday"> days.</label>
+                            
+                         </div>
+                    </div>
+
+                 
+
+                </div>
+                    
+            </div>
+
+        </div> <!-- end nlboxes -->
+
+        <div class="nlsubmitbtn">
+            <button onclick="checksub()">Submit!</button>
+        </div>
+
+    </div> <!-- end nl -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div headerthing="./footer.html"></div>
     <script>
         includeHTML();

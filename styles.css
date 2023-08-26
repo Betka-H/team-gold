@@ -221,3 +221,101 @@ hr{
 }
 
 
+/* newsletter */
+
+.nl{
+    background-color: var(--light-blue);
+    color: var(--offwhite);
+    padding:4vw;
+}
+
+.nltitles{
+    text-align: center;
+}
+
+.nlboxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nlbox{
+    background-color: var(--gold);
+    border-radius:8px;
+    padding:2vw;
+    color:var(--navy-blue);
+
+    max-width:500px;
+    margin:2vw;
+    width:100%;
+    
+    text-align: center;
+}
+
+.nlmailinput{
+    padding:8px;
+    border-style:solid;
+    border-color:var(--navy-blue);
+    border-radius:4px;
+    margin-bottom:16px;
+}
+
+.nlhr{
+    border-style:solid;
+    border-color:var(--offwhite);
+    border-width:1px;
+    margin-top:1.5vw;
+    margin-bottom:1.5vw;
+}
+
+@media only screen and (max-width: 1338px) {
+    .nlhr{
+        display:none;
+    }
+  }
+
+.nlfreqradio{
+    text-align:left;
+    padding-left:4vw;
+}
+
+/* .nlfreqcustom{
+    visibility: collapse;
+} */
+
+.nlfreqcustom input{
+    max-width:42px;
+    margin-top:16px;
+}
+
+/* 
+.cb:checked{
+    visibility: collapse;
+  } */
+
+  .nlsubmitbtn button{
+    background-color:var(--gold);
+    color:var(--navy-blue);
+    border-color:var(--offwhite);
+    border-style:solid;
+    border-width:2px;
+    border-radius:4px;
+    font-size:larger;
+    padding:1vw;
+  }
+
+  .nlsubmitbtn button:hover{
+    background-color:var(--navy-blue);
+    color:var(--gold);
+  }
+
+  .nlsubmitbtn button:active{
+    background-color:var(--light-blue);
+    border-color:var(--gold);
+    color:var(--offwhite);
+  }
+
+.nlsubmitbtn{
+    display:flex;
+    justify-content: center;
+}
