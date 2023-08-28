@@ -37,18 +37,23 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
   <!-- css link -->
   <link rel="stylesheet" type="text/css" href="./style2.css" />
+  <title>Resources</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+  <!-- icon -->
 </head>
 
 <body>
   <div headerthing="./header.html"></div>
+
   <!-- Add the main div -ana -->
 
   <section class="callquiz">
     <div class="img-cq">
-      <img src="/images/Personal finance-rafiki.png" alt="Illustration" />
+      <img src="/images/savemunz.png" alt="Illustration" />
     </div>
     <div class="right-content">
       <h2 class="h2-cq">
@@ -56,7 +61,7 @@
         <span class="h2-line2">Take our saving quiz!</span>
       </h2>
       <div class="btncq">
-        <a href="/Saving map/quiz.html" target="_blank">Quiz</a>
+        <a href="https://archeana.github.io/quiz/" target="_blank">Quiz</a>
       </div>
     </div>
   </section>
@@ -66,7 +71,7 @@
   <section class="Dashboard">
     <div class="container-sm">
       <button onclick="toggleContent('divcl')">
-        <div class="zone clothes">
+        <div id="linkcl" class="zone clothes">
           <img src="/images/Retail markdown-bro.png" alt="Illustration about clothes" title="clothes" />
           <h4>Clothes</h4>
         </div>
@@ -74,11 +79,12 @@
       <!-- Toggled content for Clothes -->
       <div id="divcl" class="toggle-content">
         <!-- Toggled content goes here -->
+        <h2 id="h2cl">Clothes</h2>
         <section class="articles">
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/vinted.png" alt="vinted logo" />
+                <img src="images/vinted.png" alt="vinted logo" />
               </figure>
               <div class="article-body">
                 <h2>Vinted</h2>
@@ -108,13 +114,14 @@
       <!-- end of hide toglle -->
       <!-- transport -->
       <button onclick="toggleContent('divtr')">
-        <div class="zone transport">
+        <div id="linktr" class="zone transport">
           <img src="/images/Life in a city-amico.png" alt="Illustration with a city and transports" title="transport" />
           <h4>Transport</h4>
         </div>
       </button>
       <!-- change id name -->
       <div id="divtr" class="toggle-content">
+        <h2 id="h2tr">Transport</h2>
         <section class="articles">
           <article>
             <div class="article-wrapper">
@@ -153,19 +160,19 @@
 
       <!-- furniture button -->
       <button onclick="toggleContent('divfr')">
-        <div class="zone furniture">
-          <img src="/images/Furniture store-amico.png" alt="Illustration of the furniture in a living room"
-            title="Household" />
+        <div id="linkfr" class="zone furniture">
+          <img src="/images/Furniture store-amico.png" alt="Illustration of the furniture in a living room" title="Household" />
           <h4>Household</h4>
         </div>
       </button>
       <!-- change id name -->
       <div id="divfr" class="toggle-content">
+        <h2 id="h2fr">Household</h2>
         <section class="articles">
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/facebook market place.png" alt="blabla car logo" />
+                <img src="/images/facebook market place.png" alt="facebook marketplace logo" />
               </figure>
               <div class="article-body">
                 <h2>Facebook Marketplace</h2>
@@ -179,7 +186,7 @@
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/fleamarkt.jpg" alt="waze logo" />
+                <img src="/images/fleamarkt.jpg" alt="image of a flea market" />
               </figure>
               <div class="article-body">
                 <h2>Flea Market</h2>
@@ -200,19 +207,19 @@
 
       <!-- Activities button -->
       <button onclick="toggleContent('divat')">
-        <div class="zone activities">
-          <img src="/images/About me-cuate.png" alt="Illustration of a young man about his interests"
-            title="Activities" />
+        <div id="linkat" class="zone activities">
+          <img src="/images/About me-cuate.png" alt="Illustration of a young man about his interests" title="Activities" />
           <h4>Activities</h4>
         </div>
       </button>
       <!-- change id name -->
       <div id="divat" class="toggle-content">
+        <h2 id="h2at">Activities</h2>
         <section class="articles">
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/triftstore.jpg" alt="blabla car logo" />
+                <img src="images/triftstore.jpg" alt="blabla car logo" />
               </figure>
               <div class="article-body">
                 <h2>Search thrift stores near me</h2>
@@ -228,7 +235,7 @@
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/ebay.png" alt="waze logo" />
+                <img src="/images/833_ebay.png" alt="waze logo" />
               </figure>
               <div class="article-body">
                 <h2>Ebay</h2>
@@ -246,18 +253,19 @@
       <!-- end of hide toglle -->
       <!-- Food button -->
       <button onclick="toggleContent('divfood')">
-        <div class="zone food">
+        <div id="linkfood" class="zone food">
           <img src="/images/Eco shopping-rafiki.png" alt="Illustration of a woman in a supermarkt" title="Food" />
           <h4>Food</h4>
         </div>
       </button>
       <!-- change id name -->
       <div id="divfood" class="toggle-content">
+        <h2 id="h2food">Food</h2>
         <section class="articles">
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/foodsharing.png" alt="blabla car logo" />
+                <img src="/images/foodsharing.png" alt="foodsharing logo" />
               </figure>
               <div class="article-body">
                 <h2>Foodsharing</h2>
@@ -272,7 +280,7 @@
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/toogoodtogo.png" alt="waze logo" />
+                <img src="/images/toogoodtogo.pn" alt="togoodtogo logo" />
               </figure>
               <div class="article-body">
                 <h2>To good to go</h2>
@@ -290,18 +298,19 @@
       <!-- end of hide toglle -->
       <!-- Health button -->
       <button onclick="toggleContent('divhe')">
-        <div class="zone health">
+        <div id="linkhe" class="zone health">
           <img src="/images/Pediatrician-pana.png" alt="Illustration of a kid in the doctors office" title="Health" />
           <h4>Health</h4>
         </div>
       </button>
       <!-- change id name -->
       <div id="divhe" class="toggle-content">
+        <h2 id="h2he">Health</h2>
         <section class="articles">
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/heathr.jpg" alt="two slides of bread with veggies" />
+                <img src="/images/heathr.jpg" alt="slides of bread with veggies" />
               </figure>
               <div class="article-body">
                 <h2>5 lifestyle changes</h2>
@@ -317,7 +326,7 @@
           <article>
             <div class="article-wrapper">
               <figure>
-                <img src="/images/heath insurance.jpg" alt="money with a stethoscope" />
+                <img src="/images/heath insurance.jpg" alt="image of money with a stethoscope" />
               </figure>
               <div class="article-body">
                 <h2>How to save money on Health insurance</h2>
@@ -337,7 +346,8 @@
   </section>
 
   <script src="script.js"></script>
-  <a href="https://storyset.com/"> illustrations by Storyset</a>
+  <script src="script2.js"></script>
+
   <div headerthing="./footer.html"></div>
   <script>
     includeHTML();
