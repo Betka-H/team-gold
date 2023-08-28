@@ -252,6 +252,13 @@ hr{
     text-align: center;
 }
 
+.nlbox p{
+    display:flex;
+    justify-content: center;
+    margin-left:8px;
+    margin-right:8px;
+}
+
 .nlmailinput{
     padding:8px;
     border-style:solid;
@@ -277,6 +284,7 @@ hr{
 .nlfreqradio{
     text-align:left;
     padding-left:4vw;
+    margin-bottom:16px;
 }
 
 /* .nlfreqcustom{
@@ -288,12 +296,17 @@ hr{
     margin-top:16px;
 }
 
+.nlfreqcustom {
+    display:none;
+    
+}
+
 /* 
 .cb:checked{
     visibility: collapse;
   } */
 
-  .nlsubmitbtn button{
+  .nlsubmitbtn input{
     background-color:var(--gold);
     color:var(--navy-blue);
     border-color:var(--offwhite);
@@ -304,12 +317,12 @@ hr{
     padding:1vw;
   }
 
-  .nlsubmitbtn button:hover{
+  .nlsubmitbtn input:hover{
     background-color:var(--navy-blue);
     color:var(--gold);
   }
 
-  .nlsubmitbtn button:active{
+  .nlsubmitbtn input:active{
     background-color:var(--light-blue);
     border-color:var(--gold);
     color:var(--offwhite);
@@ -318,4 +331,16 @@ hr{
 .nlsubmitbtn{
     display:flex;
     justify-content: center;
+}
+
+.nlmailinput input:valid{
+   background-color: greenyellow;
+}
+
+.nlmailinput input:invalid{
+   background-color:orange;
+}
+
+.hidden{
+    display:none;
 }

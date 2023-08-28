@@ -31,18 +31,24 @@
         <div class="nlboxes">
             <div class="nlbox"> <!-- first box -->
                 <h2>Enter your e-mail:</h2>
-
+                <p>Make sure to enter a valid email adress!</p>
+<form action="/contact.html" onsubmit="return validateEmail()">
                 <div class="nlmail"> <!-- mail-->
-                    <input type="text" placeholder="name@mail.com" class="nlmailinput"> <!-- mail input field -->
+                    <input type="email" placeholder="name@mail.com" id="nlemail" class="nlmailinput" type="email" name="email" oninvalid="this.setCustomValidity('You need to input a valid email adress!')" oninput="this.setCustomValidity('')" required> <!-- mail input field -->
+
 
                     <div class="nltos"> <!-- tos check -->
-                        <input type="checkbox" name="toscheck" oncheck="checksub()"> <!-- tos check box -->
+                        <input type="checkbox" name="toscheck" oncheck="checksub()" required oninvalid="this.setCustomValidity('You need to agree to our Terms of Service!')" oninput="this.setCustomValidity('')"> <!-- tos check box -->
                             <label for="toscheck">I agree to the <a href="tos.html">Terms of Service</a></label>
                     </div>
                 </div>
             </div>
 
             <div class="nlhr"></div> <!-- divider -->
+
+
+
+
 
             <div class="nlbox"> <!-- second box -->
 
@@ -51,61 +57,78 @@
                 <div>
                     <div class="nlfreqradio">
                         
-                          <div>
+                          <!-- <div>
                             <div>
-                              <input type="radio" name="freq" checked="checked" onclick="nlcustomradiooff()">
+                              <input type="radio" name="freq" checked="checked" required onclick="toggleDiv(false)" value="hide">
                               <label>Daily</label>
                             </div>
                           </div>
 
                           <div>
                             <div>
-                              <input type="radio" name="freq" onclick="nlcustomradiooff()">
+                              <input type="radio" name="freq" required onclick="toggleDiv(false)" value="hide">
                               <label>Weekly</label>
                             </div>
                           </div>
 
                           <div>
                             <div>
-                              <input type="radio" name="freq" onclick="nlcustomradiooff()">
+                              <input type="radio" name="freq" required onclick="toggleDiv(false)" value="hide">
                               <label>Monthly</label>
                             </div>
                           </div>
 
                           <div>
                             <div class="cb">
-                              <input type="radio" name="freq" onclick="nlcustomradioon()">
+                              <input type="radio" name="freq" required onclick="toggleDiv(true)" value="show">
                               <label>Custom:</label>
                             </div>
-                          </div>
-                          <div class="nlfreqcustom">
+                          </div> -->
+
+
+
+                          <label>
+                            <input type="radio" name="option" value="hide" onclick="toggleDiv(false); updateDaysint2(1)"> Daily
+                          </label><br>
+                          <label>
+                            <input type="radio" name="option" value="hide" onclick="toggleDiv(false); updateDaysint2(7)"> Weekly
+                          </label><br>
+                          <label>
+                            <input type="radio" name="option" value="hide" onclick="toggleDiv(false); updateDaysint2(30)"> Monthly
+                          </label><br>
+                          
+
+                            <label>
+                              <input type="radio" name="option" value="show" onclick="toggleDiv(true)"> Custom
+                            </label>
+                            
+
+                          
+                        
+
+                      
 
 
 
 
+               <!-- id="customchoice" class="nlfreqcustom" class="hidden" -->           <div  >
 
 
 
 
-
-
-
-
+<div id="myDiv"  class="nlfreqcustom">
                             Every 
-                            <input type="number" name="nfcmonth" min="0" value="0"> <!-- months -->
-                                <label for="nfcmonth"> months, </label>
+                            <input type="number" name="nfcmonth" min="0" value="0" onchange="updateTotalDays()"> <!-- months -->
+                            <label for="nfcmonth"> months, </label>
+                            
+                            <input type="number" name="nfcweek" min="0" value="0" onchange="updateTotalDays()"> <!-- weeks -->
+                            <label for="nfcweek"> weeks and </label>
+                            
+                            <input type="number" name="nfcday" min="0" value="1" onchange="updateTotalDays()"> <!-- days -->
+                            <label for="nfcday"> days.</label>
                             
 
-                            <input type="number" name="nfcweek" min="0" value="0"> <!-- weeks -->
-                                <label for="nfcweek"> weeks and  </label>
-        
-
-                            <input type="number" name="nfcday" min="0" value="0"> <!-- days -->
-                                <label for="nfcday"> days.</label>
-                            
-
-
-
+</div>
 
 
 
@@ -133,10 +156,11 @@
 
         </div> <!-- end nlboxes -->
 
+        
         <div class="nlsubmitbtn">
-            <button onclick="subcheck()">Submit!</button>
+          <input type="submit" value="Submit!">
         </div>
-
+</form>
     </div> <!-- end nl -->
 
 
