@@ -107,6 +107,8 @@ li {
     margin: 2% auto; /* Center horizontally and add margin */
     /* Add padding for spacing */
     padding: 20px;
+    max-height: 80vh;
+    overflow: hidden;
 }
 
 .img-cq img {
