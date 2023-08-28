@@ -97,8 +97,9 @@ li {
     align-items: center;
     padding: 2% 5%;
     background-color: rgba(36, 70, 250, 1);
-    max-height: 80vh;
+    max-height: 20vh;
     overflow: hidden;
+    margin: 2%;
 }
 
 .img-cq img {
@@ -163,12 +164,12 @@ li {
 /* dashboards/savinngs map (SM) zone is the icon zone - ana*/
 .container-sm {
     display: grid;
-    gap: 40px;
+    gap: 50px;
     /* fraction is better than px or % its responsible */
     /* grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr;
     margin: 20px 20px; */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     /* Updated width */
     grid-template-rows: auto;
     /* Fixed row height */
@@ -184,7 +185,7 @@ li {
     object-fit: cover;
 }
 
-#divcl,
+/* #divcl,
 #divtr {
     width: 100%;
     padding: 50px 0;
@@ -193,18 +194,21 @@ li {
     margin-top: 20px;
     grid-row: span 2;
     /* Add this to span across rows */
-}
+
 
 /* bew div toggle */
 .toggle-content {
     display: none;
     /* Hide toggled content by default */
     background-color: rgb(207, 228, 236);
-    max-width: 100%;
-    /* Set the maximum width for the toggle content */
+    max-width: 120%;
     margin: 0 auto;
-    /* Center the content horizontally */
-    box-sizing: border-box; /* Include padding in the width calculation */
+
+    padding: 50px;
+    /* Use auto for height to allow the content to dictate the height */
+    height: auto;
+    /* Add some bottom margin to create space between sections */
+    margin-bottom: 20px;
 }
 
 /* Adjust card max-width within toggle content */
@@ -212,8 +216,9 @@ li {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define grid columns */
     gap: 20px; /* Add some gap between cards */
-    max-width: 100%; /* Set the maximum width for the articles */
+    max-width: 120%; /* Set the maximum width for the articles */
     margin: 0 auto; /* Center the articles horizontally */
+    
 }
 
 article {
@@ -272,16 +277,6 @@ article:has(:hover, :focus) {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-
-/************************ 
-  Generic layout (demo looks)
-  **************************/
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
 
 .articles {
