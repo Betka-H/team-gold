@@ -400,3 +400,23 @@ hr{
 .hidden{
     display:none;
 }
+
+.nlsbutton{
+    
+    background-color:var(--gold);
+    color:var(--navy-blue);
+    border-color:var(--light-blue);
+    border-style:solid;
+    border-width:6px;
+    border-radius:4px;
+    font-size:larger;
+    padding:1vw;
+
+}
+
+.btncenter{
+
+    display: flex;
+    justify-content: center;
+margin-bottom:128px;
+}
