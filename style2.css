@@ -1,8 +1,14 @@
-:root {
-    --gold: #ffd700;
-    --navy-blue: #001F3F;
-    --dark-red: #8B0000;
-    --offwhite: #f5f5f5;
+/* colors */
+:root{
+    --gold:/* #ffd700 *//* #c19344 *//* #498ab3 *//* #d3b152 *//* #cdad4e */  /* end of yellow */
+    #f1af3f
+    ;
+    --navy-blue:#00254b/* #283b55 *//* #a5c2c7 *//* #384b73 *//* #365892 */   /* end of blue */
+    /* #321b3b */
+    ;
+    --light-blue: /* #68266e */#0e467e;
+    --dark-red:#8B0000;
+    --offwhite:#f5f5f5;
 }
 
 body {
@@ -96,10 +102,11 @@ li {
     gap: 30px;
     align-items: center;
     padding: 2% 5%;
-    background-color: rgba(36, 70, 250, 1);
-    max-height: 20vh;
-    overflow: hidden;
-    margin: 2%;
+    /* background-color: rgba(36, 70, 250, 1); */
+    max-width: 80%; /* Set maximum width */
+    margin: 2% auto; /* Center horizontally and add margin */
+    /* Add padding for spacing */
+    padding: 20px;
 }
 
 .img-cq img {
@@ -169,7 +176,7 @@ li {
     /* grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr;
     margin: 20px 20px; */
-    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     /* Updated width */
     grid-template-rows: auto;
     /* Fixed row height */
@@ -330,6 +337,12 @@ article:has(:hover, :focus) {
     border-radius: 4px;
     border: 1px solid #bbb;
     transition: all 0.3s linear;
+     /* Set maximum width for better responsiveness */
+     max-width: 100%;
+     /* Center the zone horizontally */
+     margin: 0 auto;
+     /* Add padding for spacing */
+     padding: 10px;
 }
 
 .zone:hover {
