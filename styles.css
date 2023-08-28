@@ -414,6 +414,21 @@ hr{
 
 }
 
+.nlsbutton:hover{
+    
+    background-color:var(--dark-red);
+    color:var(--gold);
+    border-color:var(--navy-blue);
+
+}
+.nlsbutton:active{
+    
+    background-color:var(--light-blue);
+    color:var(--gold);
+    border-color:var(--navy-blue);
+
+}
+
 .btncenter{
 
     display: flex;
