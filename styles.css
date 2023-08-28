@@ -73,9 +73,9 @@ a:active{
 
 /* footer */
 .footer-content{
-    padding:10px;
+    padding:0px;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     /* flex-direction: column; anatook*/
@@ -91,7 +91,7 @@ a:active{
 }
 
 .contact-info, .footer-links, .social-media {
-    margin-bottom: 15px;
+    margin: 16px;
 }
 
 .footer-links ul {
@@ -119,7 +119,8 @@ a:active{
 .copyright {
     text-align: center;
     background-color:var(--navy-blue);
-    padding: 10px;
+    padding: 16px;
+    padding-left: 32px;
     color: white;
     align-items: center;
 }
