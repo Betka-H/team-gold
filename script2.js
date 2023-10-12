@@ -11,7 +11,7 @@ function toggleContent(contentId) {
     }
 }
 
-// Get the h2 element by its id and apply the desired styles
+// Get the h2 element by its id and apply the desired styles - 
 var h2Element = document.getElementById("h2cl");
 h2Element.style.color = "blue";
 h2Element.style.textAlign = "center";
